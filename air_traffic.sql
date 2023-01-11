@@ -45,23 +45,23 @@ CREATE TABLE passengers (
 
 CREATE TABLE seats (
   id SERIAL PRIMARY KEY,
-  seat VARCHAR(3) NOT NULL
+  seat VARCHAR(3) NOT NULL UNIQUE
 );
 
 CREATE TABLE countries (
   id SERIAL PRIMARY KEY,
-  country_name TEXT NOT NULL
+  country_name TEXT NOT NULL UNIQUE
 );
 
 CREATE TABLE cities (
   id SERIAL PRIMARY KEY,
-  city_name TEXT NOT NULL
+  city_name TEXT NOT NULL UNIQUE
 );
 
 
 CREATE TABLE airlines (
   id SERIAL PRIMARY KEY,
-  airline TEXT NOT NULL
+  airline TEXT NOT NULL UNIQUE
 );
 
 INSERT INTO passengers (first_name, last_name)
