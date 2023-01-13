@@ -42,7 +42,7 @@ CREATE TABLE patients (
 CREATE TABLE doctors_patients (
     id SERIAL PRIMARY KEY,
     doctors_id INTEGER NOT NULL REFERENCES doctors ON DELETE CASCADE,
-    patients_id INTEGER REFERENCES patients ON DELETE CASCADE
+    patients_id INTEGER NOT NULL REFERENCES patients ON DELETE CASCADE
 );
 
 INSERT INTO doctors_patients (doctors_id, patients_id)
